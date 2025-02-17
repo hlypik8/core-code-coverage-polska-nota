@@ -12,10 +12,22 @@ public class ReversePolishNotationCalculatorTest {
 
     @Test
     public void shouldCalculateAddition() {
-        //TODO
+        assertEquals(7, rpn.calculatePolishNotation("3 4 +"));
     }
 
-    //TODO
+    @Test
+    public void shouldCalculateMultiplication() {
+        assertEquals(12, rpn.calculatePolishNotation("3 4 *"));
+    }
 
+    @Test
+    public void shouldCalculateSubtraction() {
+        assertEquals(-1, rpn.calculatePolishNotation("3 4 -"));
+    }
+
+    @Test
+    public void shouldCalculateAdditionWithSpaces() {
+        assertEquals(7, rpn.calculatePolishNotation("  3   4   +  "));
+    }
 }
 
